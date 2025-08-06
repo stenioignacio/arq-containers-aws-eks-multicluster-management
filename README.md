@@ -14,3 +14,9 @@ Multicluster EKS managemente com ArgoCD 🚀
 
   1. Helm charts adicionais
   Pesquise por Helm charts que são importantes para uma boa gestão ou adicionem features úteis aos clusters e reflita o quão essenciais eles seriam dentro de vários clusters de Kubernetes. Caso identifique uma, ou mais tecnologias legais, faça a instalação deles via terraform em seu cluster.
+
+# Argocd senha inicial:
+
+```sh
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
